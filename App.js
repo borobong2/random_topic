@@ -5,8 +5,12 @@ import CustomButton from './src/components/CustomButton';
 const App = () => {
   let [text, setText] = useState(0);
   const changeText = () => {
-    setText(text++);
+    setText(getRandom(0, 10));
   };
+  const getRandom = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
+
   return (
     <View style={{flex: 1}}>
       <CustomButton onPress={changeText} />
