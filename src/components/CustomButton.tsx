@@ -5,7 +5,7 @@ const CustomButton = (props: any) => {
   return (
     <View>
       <Pressable
-        style={{height: 100, backgroundColor: 'blue'}}
+        style={{height: 100, width: 100, backgroundColor: 'blue'}}
         onPress={props.onPress}
       />
     </View>
