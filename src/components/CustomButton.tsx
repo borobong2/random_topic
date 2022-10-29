@@ -1,15 +1,18 @@
-import React, {useState} from 'react';
-import {Pressable, View, Text} from 'react-native';
+import React from 'react';
+import {Pressable, View, StyleSheet} from 'react-native';
 
 const CustomButton = (props: any) => {
+  const styles = createStyles();
   return (
     <View>
-      <Pressable
-        style={{height: 100, width: 100, backgroundColor: 'blue'}}
-        onPress={props.onPress}
-      />
+      <Pressable style={styles.btn} onPress={props.onPress} />
     </View>
   );
 };
 
 export default CustomButton;
+
+const createStyles = () =>
+  StyleSheet.create({
+    btn: {height: 30, width: 100, backgroundColor: 'blue'},
+  });

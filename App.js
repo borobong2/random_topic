@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 import CustomButton from './src/components/CustomButton';
 import CustomText from './src/components/CustomText';
 import {data} from './data';
@@ -13,15 +13,10 @@ const App = () => {
   const getRandom = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
-
+  const styles = createStyles();
   return (
-    <View style={{flex: 1}}>
-      <View
-        style={{
-          alignItems: 'center',
-          justifyContent: 'center',
-          marginTop: 100,
-        }}>
+    <View style={styles.container}>
+      <View style={styles.content}>
         <CustomButton onPress={changeText} />
         <CustomText>{data[`topic${text}`]}</CustomText>
       </View>
@@ -30,3 +25,13 @@ const App = () => {
 };
 
 export default App;
+
+const createStyles = () =>
+  StyleSheet.create({
+    container: {flex: 1},
+    content: {
+      alignItems: 'center',
+      justifyContent: 'center',
+      marginTop: 100,
+    },,
+  });;
