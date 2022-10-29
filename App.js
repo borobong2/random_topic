@@ -33,5 +33,5 @@ const createStyles = () =>
       alignItems: 'center',
       justifyContent: 'center',
       marginTop: 100,
-    },,
-  });;
+    },
+  });
